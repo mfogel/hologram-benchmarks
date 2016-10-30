@@ -1,4 +1,4 @@
-int check_interval_ms = 15 * 60 * 1000;
+int check_interval_min = 15;
 
 void setup() {
   Dash.begin();
@@ -34,6 +34,6 @@ void loop() {
   //SerialUSB.print(',');
   //SerialUSB.print(bat_mv);
   //SerialUSB.println();
-  
-  Dash.snooze(check_interval_ms);
+
+  Dash.deepSleepAtMostMin(check_interval_min);
 }
